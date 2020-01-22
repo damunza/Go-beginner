@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 func main(){
-	// lessTen()
-	// multiplesThree()
+	lessTen()
+	multiplesThree()
 	fizzBuzz()
 }
 
@@ -11,19 +11,19 @@ func main(){
 bracets not indenteds
 */
 
-// func lessTen(){
-// 	for i:=1; i<=10; i++{
-// 		fmt.Println(i)
-// 	}
-// }
+func lessTen(){
+	for i:=1; i<=10; i++{
+		fmt.Println(i)
+	}
+}
 
-// func multiplesThree(){
-// 	for i:=1; i <=100; i++{
-// 	if i % 3 == 0{
-// 		fmt.Println(i)
-// 	}
-// }
-// }
+func multiplesThree(){
+	for i:=1; i <=100; i++{
+	if i % 3 == 0{
+		fmt.Println(i)
+	}
+}
+}
 
 func fizzBuzz(){
 	for i:=1; i <= 100; i++{

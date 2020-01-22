@@ -30,8 +30,22 @@ func main(){
 - dealing with map< dictionaries> data types 
 - make key word is used to create maps
 */
+
 func dictionary(){
 	x := make(map[string]int) // declaring key data type and value data type
-	x["key"] = 10
-	fmt.Println(x)
+	x["one"] = 1
+	x["two"] = 2
+	x["three"] = 3
+	x["four"] = 4
+	x["five"] = 5
+	x["six"] = 6
+
+/*
+the following line prevents the calling of keys that do not
+exist and receiving a 0 or ""
+*/
+	if name, ok := x["six"]; ok{
+		fmt.Println( name, ok)
+	}
 }
+

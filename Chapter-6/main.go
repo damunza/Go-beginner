@@ -5,7 +5,7 @@ import "fmt"
 func main(){
 	basicNest()
 	variadic()
-// 	closure()
+	closure()
 }
 
 // an example of a Basic Nest function
@@ -55,4 +55,34 @@ func variadic(){
 	*/
 	fmt.Println(add(1,2,3,4))
 
+}
+
+func makeEvenGenerator() func() int{
+	/*
+	The return must be FUNC()
+	The value is unsigned
+	this is a generator that when run generates a new value
+	every time its run
+	*/
+	start := 0
+	return func() (ret int){
+		/*
+		this function needs a return with the word RET then 
+		the type of data to run
+		*/
+		ret = start
+		start +=2
+		return
+	}
+
+}
+
+func closure(){
+	/*
+	this is a function that executes the generator
+	*/
+	next := makeEvenGenerator()
+
+	fmt.Println(next())
+	fmt.Println(next())
 }

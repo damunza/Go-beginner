@@ -4,7 +4,7 @@ package main
 import "fmt"
 func main(){
 	basicNest()
-// 	variadic()
+	variadic()
 // 	closure()
 }
 
@@ -34,4 +34,25 @@ func basicNest(){
 		78,
 	}
 	fmt.Println(average(x))
+}
+
+func add(x ...int) int{
+	/*
+	this function takes input of multiple integers 
+	returns and integer value after addition
+	*/
+	start:= 0
+	for _, item := range x{
+		start += item
+	}
+	return start
+}
+
+func variadic(){
+	/*
+	an example of a variadic function that takes in a 
+	collection of integers and adds them up
+	*/
+	fmt.Println(add(1,2,3,4))
+
 }
